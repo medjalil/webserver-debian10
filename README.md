@@ -1,3 +1,6 @@
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/mohamed-abdeljalil-70280362/
+[![LinkedIn][linkedin-shield]][linkedin-url]
 # Install Web Server on Debian 10 for Symfony App
 <!-- TABLE OF CONTENTS -->
  ## Table of Contents
