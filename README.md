@@ -11,10 +11,13 @@
   * [Install phpmyadmin](#install-phpmyadmin)
   * [Install composer](#install-composer)
   * [Install git](#install-git)
-  * [Install npm & yarn](#install-npm-yarn)
+  * [Install npm & yarn](#install-npm--yarn)
   * [Install symfony CLI](#install-symfony-cli)
 * [Configuration](#configuration)
-              
+  * [virtualhost apache2 configuration](#virtualhost-apache2-configuration)
+  * [access configuration](#access-configuration)
+  * [Install firewall](#install-firewall)
+  * [HTTPS with Lent's Encrypt](#https-with-lents-encrypt)
 
 ## Installation
 ### Update password root
