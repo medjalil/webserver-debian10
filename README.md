@@ -1,10 +1,13 @@
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mohamed-abdeljalil-70280362/
+
+<img src="https://www.debian.org/logos/openlogo-100.jpg" align="right">
+<img src="https://symfony.com/logos/symfony_black_03.png" align="right" width="100px">
+
 [![LinkedIn][linkedin-shield]][linkedin-url]
 # Install Web Server on Debian 10 for Symfony App
 <!-- TABLE OF CONTENTS -->
  ## Table of Contents
-
 * [Installation](#installation)
   * [Update password root](#update-password-root)
   * [Update debian](#update-debian)
