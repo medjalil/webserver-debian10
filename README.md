@@ -51,28 +51,20 @@ apt-get -y update
 apt-get -y install php7.4
 apt-get -y install php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,xml}
 ```
-You can create test file ``` nano /var/www/html/info.php ```
-
-Add this code ```php <?php phpinfo(); ?> ```
-
-Go to : ip_server/info.php 
-
-Done :+1: 
+1. You can create test file ``` nano /var/www/html/info.php ```
+2. Add this code ``` <?php phpinfo(); ?> ```
+3. Go to : ip_server/info.php 
 
 ### Install mariadb 10.4
 ```sh
-sudo apt -y update
-sudo apt -y install software-properties-common gnupg2
-sudo apt -y upgrade
-
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
-sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.liquidtelecom.com/repo/10.4/debian buster main'
-
-sudo apt update
-sudo apt install mariadb-server mariadb-client
-
-sudo mysql_secure_installation
+apt-get -y install software-properties-common gnupg2
+apt-get -y upgrade
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
+add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.liquidtelecom.com/repo/10.4/debian buster main'
+apt-get -y update
+apt-get install mariadb-server mariadb-client
 ```
+1. The config of mariadb with command ``` sudo mysql_secure_installation ``` all ``` y ``` and choice the password
 ### Install phpmyadmin
 ```sh
 cd /var/www/html/
@@ -82,18 +74,21 @@ rm phpMyAdmin-5.0.4-english.tar.gz
 mv phpMyAdmin-5.0.4-english /var/www/html/phpmyadmin
 sudo service apache2 restart
 ```
+1. Go to : ip_server/phpmyadmin
 ### Install composer
 ```sh
-sudo apt update
-sudo apt install wget php-cli php-zip unzip
+apt-get -y install wget php-cli php-zip unzip
 wget -O composer-setup.php https://getcomposer.org/installer
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 sudo composer self-update
 ```
+1. test install run ``` composer -V ```
 ### Install git
 ```sh
-sudo apt update
-sudo apt install git
+apt-get -y install git
+```
+1. config git 
+```sh
 git --version
 git config --global user.name "Your Name"
 git config --global user.email "youremail@yourdomain.com"
@@ -101,13 +96,16 @@ git config --list
 ```
 ### Install npm & yarn
 ```sh
-sudo apt update
-sudo apt install build-essential curl
+apt-get -y install build-essential curl
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-sudo apt install nodejs
-node --version
-sudo apt-get update 
-sudo apt-get install yarn
+apt-get -y install nodejs 
+apt-get -y install yarn
+```
+1.test install node npm yarn: 
+```sh
+node -v #v14.15.1
+npm -v #6.14.8
+yarn -v #1.22.5
 ```
 ### Install symfony CLI
 ```sh
