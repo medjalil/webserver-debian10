@@ -33,27 +33,32 @@ su root
 ```
 ### Update debian
 ```sh
-apt update 
-apt upgrade
-apt dist-upgrade
+apt-get -y update 
+apt-get -y upgrade
+apt-get -y dist-upgrade
+apt-get -y autoremove
 ```
 ### Install apache2
 ```sh
-apt install apache2
+apt-get -y install apache2
 ```
 ### Install php7.4
 ```sh
-sudo apt -y install lsb-release apt-transport-https ca-certificates
-sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+apt-get -y install lsb-release apt-transport-https ca-certificates
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
-
-apt update
-sudo apt -y install php7.4
-
-sudo apt-get install php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,xml}
-
-nano /var/www/html/info.php
+apt-get -y update
+apt-get -y install php7.4
+apt-get -y install php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,xml}
 ```
+You can create test file ``` nano /var/www/html/info.php ```
+
+Add this code ```php <?php phpinfo(); ?> ```
+
+Go to : ip_server/info.php 
+
+Done :+1: 
+
 ### Install mariadb 10.4
 ```sh
 sudo apt -y update
