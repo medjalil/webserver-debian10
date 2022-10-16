@@ -117,7 +117,7 @@ symfony check:requirements
 ### virtualhost apache2 configuration
 ```sh
 cd /etc/apache2/sites-available/
-sudo nanao yourdomain.conf
+sudo nano yourdomain.conf
 ```
 ```apacheconf
 <VirtualHost *:80>
